@@ -1,0 +1,138 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 1%; */
+    color: white;
+    background-color: black;
+    max-height: 60px;
+    /* background-image: url("images/klarin-steffens-IgDroR_DaMY-unsplash.jpg"); */
+}
+/* title font/spacing */
+h1{
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique 10deg;
+}
+/* nav bar font and spacing */
+nav ul {
+    margin: 1em;
+    display: flex;
+    justify-content: flex-end;
+    /* margin-top: 40px; */
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+/* nav text color and spacing */
+nav ul a{
+    color: white;   
+    margin: 10px;
+}
+/* Nav active indicator */
+nav ul a:hover{
+    text-decoration: none;
+}
+/* img backround and size */
+#subtitle{
+    background-image: url("images/klarin-steffens-IgDroR_DaMY-unsplash.jpg");
+    display: flex;
+    max-height: 500px;
+    justify-content: flex-end;
+}
+/* subT placement */
+#subtitle h2{
+    margin-top: 70px;
+    margin-right: 20px;
+    color: white;
+}
+
+#about-me{
+    display: flex;  
+    justify-content: flex-start;
+}
+/* title rotation */
+#about-me h2{
+    display: flex;
+    align-items: flex-end;
+    rotate: 270deg;
+    width: 180px;
+    height: 160px;
+    justify-content: center;
+    border-bottom: solid;
+}
+#about-me div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* project display */
+#projects{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+#projects h2{
+    display: flex;
+    align-items: flex-end;
+    rotate: 270deg;
+    width: 180px;
+    height: 160px;
+    justify-content: center;
+    border-bottom: solid;
+}
+
+.project-cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 30%;
+
+}
+
+.card-alt{
+    border: solid;
+    border-color: aqua;
+    background-image: url("images/raj-dhiman-aQ8tDKyOsCY-unsplash.jpg");
+    width: 60rem;
+    height: 20rem;
+    color: white;
+}
+
+.card{
+    
+    border: solid;
+    border-color: aqua;
+    background-color: black;
+    width: 20rem;
+    height: 20rem;
+    color: white;
+}
+
+#contact-info{
+    display: flex;  
+    justify-content: flex-start;
+}
+
+#contact-info h2{
+    display: flex;
+    align-items: flex-end;
+    rotate: 270deg;
+    width: 180px;
+    height: 160px;
+    justify-content: center;
+    border-bottom: solid;
+}
+
+/* contact info orientation */
+#contact-info ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* contact info active indicator */
+#contact-info ul a:hover{
+    text-decoration: none;
+}
+
+@media screen {
+    
+}
