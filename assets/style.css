@@ -90,26 +90,41 @@ nav ul a:hover{
 
 .card-alt{
     border: solid;
-    border-color: aqua;
+    border-color: red;
     background-image: url("images/raj-dhiman-aQ8tDKyOsCY-unsplash.jpg");
-    width: 60rem;
-    height: 20rem;
+    background-size: cover;
+    width: 30rem;
+    height: 15rem;
     color: white;
+    margin: 0 1%;
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
 }
 
 .card{
     
     border: solid;
-    border-color: aqua;
-    background-color: black;
-    width: 20rem;
-    height: 20rem;
-    color: white;
+    border-color: rebeccapurple;
+    background-image: url("images/jonas-schone-SL16MoHjNG0-unsplash.jpg");
+    background-size: cover;
+    width: 15rem;
+    height: 15rem;
+    margin: 0 1%;
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+#p1{
+    color: black;
+    background-color: aqua;
 }
 
 #contact-info{
     display: flex;  
     justify-content: flex-start;
+    
 }
 
 #contact-info h2{
@@ -125,14 +140,22 @@ nav ul a:hover{
 /* contact info orientation */
 #contact-info ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#contact-info ul a{
+    margin: 0 5%;
+}
+
 /* contact info active indicator */
 #contact-info ul a:hover{
     text-decoration: none;
 }
 
-@media screen {
+/* make main sections stack for small screen viewing */
+/* @media screen (769px) {
     
-}
+} */
