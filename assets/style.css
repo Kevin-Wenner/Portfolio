@@ -1,16 +1,23 @@
+:root{
+    --text: white;
+    --hbackground: black;
+    --boardersize: thick double black;
+    --mbackground: #fdfdfd;
+    --fontfamily: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
 header{
     display: flex;
-    justify-content: space-between;
-    /* padding: 1%; */
-    color: white;
-    background-color: black;
+    justify-content: space-between; 
+    color: var(--text);
+    background-color: var(--hbackground);
     max-height: 60px;
-    /* background-image: url("images/klarin-steffens-IgDroR_DaMY-unsplash.jpg"); */
+    color: #faebd7;
 }
 /* title font/spacing */
 h1{
     margin-top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--fontfamily);
     font-style: oblique 10deg;
 }
 /* nav bar font and spacing */
@@ -18,8 +25,7 @@ nav ul {
     margin: 1em;
     display: flex;
     justify-content: flex-end;
-    /* margin-top: 40px; */
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--fontfamily);
     
 }
 /* nav text color and spacing */
@@ -30,6 +36,9 @@ nav ul a{
 /* Nav active indicator */
 nav ul a:hover{
     text-decoration: none;
+}
+main{
+    background-color: var(--mbackground);
 }
 /* img backround and size */
 #subtitle{
@@ -43,11 +52,13 @@ nav ul a:hover{
     margin-top: 70px;
     margin-right: 20px;
     color: white;
+    font-family: var(--fontfamily);
 }
 
 #about-me{
     display: flex;  
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 /* title rotation */
 #about-me h2{
@@ -58,16 +69,26 @@ nav ul a:hover{
     height: 160px;
     justify-content: center;
     border-bottom: solid;
+    flex: 0 0 20%;
 }
 #about-me div{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    flex: 1 0 10%;
 }
+
+#about-me div p{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 20%;
+}
+
 /* project display */
 #projects{
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     
 }
 
@@ -79,6 +100,8 @@ nav ul a:hover{
     height: 160px;
     justify-content: center;
     border-bottom: solid;
+    flex: 0 0 20%;
+
 }
 
 .project-cards{
@@ -89,41 +112,59 @@ nav ul a:hover{
 }
 
 .card-alt{
-    border: solid;
-    border-color: red;
+    border: var(--boardersize);
+    border-radius: 1rem;
     background-image: url("images/raj-dhiman-aQ8tDKyOsCY-unsplash.jpg");
     background-size: cover;
     width: 30rem;
     height: 15rem;
     color: white;
-    margin: 0 1%;
+    margin: 2rem 2rem;
     display: flex;
     align-content: flex-end;
     align-items: flex-end;
+    font-family: var(--fontfamily);
+    box-shadow: .5rem .5rem black;
+}
+
+#smallCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card-alt a{
+    
+    width: 30rem;
+    height: 15rem;
 }
 
 .card{
     
-    border: solid;
-    border-color: rebeccapurple;
+    border: var(--boardersize);
+    border-radius: 1rem;
     background-image: url("images/jonas-schone-SL16MoHjNG0-unsplash.jpg");
     background-size: cover;
     width: 15rem;
     height: 15rem;
-    margin: 0 1%;
+    margin: 2rem 2rem;
     display: flex;
     align-content: flex-end;
     align-items: flex-end;
+    font-family: var(--fontfamily);
+    box-shadow: .5rem .5rem black;
 }
 
 #p1{
     color: black;
-    background-color: aqua;
+    background-color: rgb(168, 173, 247);
+    border: var(--boardersize);
+    border-radius: .5rem;
 }
 
 #contact-info{
     display: flex;  
     justify-content: flex-start;
+    flex-wrap: wrap;
     
 }
 
@@ -135,6 +176,8 @@ nav ul a:hover{
     height: 160px;
     justify-content: center;
     border-bottom: solid;
+    flex: 0 0 20%;
+
 }
 
 /* contact info orientation */
@@ -143,19 +186,108 @@ nav ul a:hover{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--fontfamily);
+    margin-right: 22%;
 }
 
 #contact-info ul a{
+    font-size: larger;
     margin: 0 5%;
+    display: flex;
+    justify-content: space-around;
+    flex: auto;
 }
 
 /* contact info active indicator */
 #contact-info ul a:hover{
     text-decoration: none;
+
+}
+
+.card:hover{
+    box-shadow: none;
+    filter: grayscale(0%);
+}
+
+.card-alt:hover{
+    box-shadow: none;
+    filter: grayscale(40%);
 }
 
 /* make main sections stack for small screen viewing */
-/* @media screen (769px) {
+@media screen and (max-width: 900px){
+    #about-me{
+        flex-direction: column;
+    }
     
-} */
+    #about-me h2{
+        rotate: none;
+        width: auto;
+    }
+}
+
+@media screen and (max-width:769px) {
+    #subtitle{
+        justify-content: center;
+    }
+
+    #projects{
+        align-content: center;
+        justify-content: center;
+    }
+
+    #smallCards{
+        align-content: center;
+        justify-content: center;
+        
+    }
+
+    .project-cards{
+        align-content: center;
+        justify-content: center;
+    }
+
+    #projects h2{
+        rotate: none;
+        flex: none;
+    }
+    
+    .card{
+        margin:2rem 2rem;
+    }
+
+    .card-alt{
+        margin: 2rem 2rem;
+    }
+   
+    #about-me{
+        
+        justify-content: center;
+        align-content: center;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    
+    #contact-info{
+        
+        justify-content: center;
+        align-content: center;
+        
+    }
+    
+    
+    
+    #contact-info h2{
+       
+        flex: none;
+    
+    }
+
+}
+@media screen and (max-width:638px) {
+    #contact-info h2{
+        rotate: none;
+        width: auto;
+    }
+}
+    
